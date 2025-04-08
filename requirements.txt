@@ -8,4 +8,4 @@ scikeras
 scikit-learn
 openpyxl
 xgboost
-imblanced-learn
+imbalanced-learn
