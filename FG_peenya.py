@@ -26,7 +26,7 @@ def set_random_seed(seed_value=42):
     tf.random.set_seed(seed_value)
 
 # Define the main folder path
-MAINFOLDER = r"D:\APPdata_FGpeenya"
+MAINFOLDER = r"./APPdata_FGpeenya"
 
 # Create other paths relative to the main folder
 training_file_path = os.path.join(MAINFOLDER, "Training", "Training_FG.xlsx")  # FIXED TRAINING DATA
@@ -204,6 +204,9 @@ def process_data():
 
     # Add an empty 'Code' column at the end
     output_df['Code'] = '0'
+
+    # Fill NaN values in the DataFrame with 0
+    output_df = output_df.fillna(0)
 
 
     # Save the processed data using ExcelWriter
